@@ -7,5 +7,5 @@ const controllers_2 = require("../controllers");
 const router = express.Router();
 exports.router = router;
 router.post("/developer", controllers_1.developer.createDeveloper);
-router.get("/language/number-of-devs", controllers_2.language.getLanguageDeveloperCount);
+router.get("/language/dev-counts", controllers_2.language.getLanguageDeveloperCount);
 router.get("/language/company", controllers_2.language.getCompanyLanguages);

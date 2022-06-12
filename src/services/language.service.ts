@@ -19,11 +19,11 @@ const getCompanyLanguages = async () => {
   const data = await entityDb.getCompanyLanguages();
   const counts: any = {};
   data.forEach((x: any) => {
-    let company: string = counts[x["companyName"]] || "";
-    if (!company.includes(x["languageName"])) {
-      counts[x["companyName"]] =
-        (counts[x["companyName"]] ? counts[x["companyName"]] + "," : "") +
-        x["languageName"];
+    let company: string = counts[x["languageName"]] || "";
+    if (!company.includes(x["companyName"])) {
+      counts[x["languageName"]] =
+        (counts[x["languageName"]] ? counts[x["languageName"]] + "," : "") +
+        x["companyName"];
     }
   });
   return counts;

@@ -8,3 +8,4 @@ module.exports = {
         region: "eu-central-1",
     },
 };
+//just for local development, it should be removed in production

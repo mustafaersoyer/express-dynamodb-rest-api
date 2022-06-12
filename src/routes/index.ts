@@ -6,7 +6,7 @@ import { language } from "../controllers";
 const router = express.Router();
 
 router.post("/developer", developer.createDeveloper);
-router.get("/language/number-of-devs", language.getLanguageDeveloperCount);
+router.get("/language/dev-counts", language.getLanguageDeveloperCount);
 router.get("/language/company", language.getCompanyLanguages);
 
 export { router };
