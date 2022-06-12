@@ -18,8 +18,8 @@ const getLanguageDeveloperCount = () => __awaiter(void 0, void 0, void 0, functi
         languages.push(data[i].languageName);
     }
     const counts = {};
-    languages.forEach((x) => {
-        counts[x] = (counts[x] || 0) + 1;
+    languages.forEach((item) => {
+        counts[item] = (counts[item] || 0) + 1;
     });
     return counts;
 });
@@ -27,12 +27,13 @@ exports.getLanguageDeveloperCount = getLanguageDeveloperCount;
 const getCompanyLanguages = () => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield index_1.entityDb.getCompanyLanguages();
     const counts = {};
-    data.forEach((x) => {
-        let company = counts[x["companyName"]] || "";
-        if (!company.includes(x["languageName"])) {
-            counts[x["companyName"]] =
-                (counts[x["companyName"]] ? counts[x["companyName"]] + "," : "") +
-                    x["languageName"];
+    data.forEach((item) => {
+        let company = counts[item["languageName"]] || "";
+        if (!company.includes(item["companyName"])) {
+            counts[item["languageName"]] =
+                (counts[item["languageName"]]
+                    ? counts[item["languageName"]] + ","
+                    : "") + item["companyName"];
         }
     });
     return counts;
