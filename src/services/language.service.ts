@@ -9,8 +9,8 @@ const getLanguageDeveloperCount = async () => {
   }
 
   const counts: any = {};
-  languages.forEach((x: string) => {
-    counts[x] = (counts[x] || 0) + 1;
+  languages.forEach((item: string) => {
+    counts[item] = (counts[item] || 0) + 1;
   });
   return counts;
 };
@@ -18,12 +18,13 @@ const getLanguageDeveloperCount = async () => {
 const getCompanyLanguages = async () => {
   const data = await entityDb.getCompanyLanguages();
   const counts: any = {};
-  data.forEach((x: any) => {
-    let company: string = counts[x["languageName"]] || "";
-    if (!company.includes(x["companyName"])) {
-      counts[x["languageName"]] =
-        (counts[x["languageName"]] ? counts[x["languageName"]] + "," : "") +
-        x["companyName"];
+  data.forEach((item: any) => {
+    let company: string = counts[item["languageName"]] || "";
+    if (!company.includes(item["companyName"])) {
+      counts[item["languageName"]] =
+        (counts[item["languageName"]]
+          ? counts[item["languageName"]] + ","
+          : "") + item["companyName"];
     }
   });
   return counts;
