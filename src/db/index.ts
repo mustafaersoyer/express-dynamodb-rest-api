@@ -1,1 +1,1 @@
-export * as todoDb from "./todo.db";
+export * as entityDb from "./entity.db";
