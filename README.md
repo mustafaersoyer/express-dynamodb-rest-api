@@ -17,29 +17,39 @@ I tried to run it on AWS Lambda with Serverless framework, but I encountered som
 
 GET http://localhost:3000/api/language/company
 Returns which company uses which languages.
+
 Response:
+
 {
+
     "typescript": "StarLoop",
-    "java": "StarLoop,Jandarma",
-    "javascript": "Jandarma,StarLoop,NextLua",
+    "java": "StarLoop,Jandarma",    
+    "javascript": "Jandarma,StarLoop,NextLua",   
     "f#": "NextLua"
 }
 
 GET http://localhost:3000/api/language/dev-counts
 Returns how many developers the languages have.
+
 Response:
+
 {
+
     "java": 2,
     "javascript": 3,
-    "typescript": 2,
+    "typescript": 2, 
     "f#": 1
 }
 
 POST http://localhost:3000/api/developer
+
 {
+
         "firstName": "John",
         "lastName":"DOE",
         "company": "StarLoop",
         "languages": ["javascript", "f#"]
+        
 }
+
 Adds data and required relationships to DynamoDB.
