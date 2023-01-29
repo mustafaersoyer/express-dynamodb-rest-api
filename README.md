@@ -1,5 +1,5 @@
 # express-dynamodb-rest-api
-This project is for starloop backend testing.
+This project is for backend testing.
 
 I developed the project using TypeScript, DynamoDB and Express. I have run DynamoDB both locally and on AWS. It is currently available on AWS with sample data. The project works with AWS DynamoDB. I learned DynamoDB for this project.
 
@@ -22,10 +22,10 @@ Response:
 
 {
 
-    "typescript": "StarLoop",
-    "java": "StarLoop,Jandarma",    
-    "javascript": "Jandarma,StarLoop,NextLua",   
-    "f#": "NextLua"
+    "typescript": "SomeCompany",
+    "java": "SomeCompany,Jandarma",    
+    "javascript": "Jandarma,SomeCompany,LuaNx",   
+    "f#": "LuaNx"
 }
 
 GET http://localhost:3000/api/language/dev-counts
@@ -47,7 +47,7 @@ POST http://localhost:3000/api/developer
 
         "firstName": "John",
         "lastName":"DOE",
-        "company": "StarLoop",
+        "company": "SomeCompany",
         "languages": ["javascript", "f#"]
         
 }
